@@ -5,6 +5,14 @@
   padding: 16px;
 }
 
+.header-container {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  column-gap: 8px;
+  align-items: center;
+  
+}
+
 .logo {
   display: block;
   width: 24px;
@@ -35,7 +43,7 @@
   margin-bottom: 80px;
 }
 
-.post > a {
+.post>a {
   position: relative;
   color: var(--common-white);
 }
@@ -84,6 +92,7 @@
   font-family: var(--common-font);
   margin-bottom: 24px;
 }
+
 .social-link {
   padding: 8px;
   color: var(--common-black, #2f2f37);
