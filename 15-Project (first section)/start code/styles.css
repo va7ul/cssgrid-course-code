@@ -40,9 +40,24 @@
 
 .posts {
   margin-bottom: 80px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
 }
 
-.post > a {
+@media (min-width: 768px) {
+  .posts {
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .post:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+}
+
+.post>a {
   position: relative;
   color: var(--common-white);
 }
@@ -91,6 +106,7 @@
   font-family: var(--common-font);
   margin-bottom: 24px;
 }
+
 .social-link {
   padding: 8px;
   color: var(--common-black, #2f2f37);
